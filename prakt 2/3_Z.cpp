@@ -27,19 +27,19 @@ uint64_t randomSimple(int s)
         auto start = high_resolution_clock::now();
         do {
             number = mersenne();
-            cout <<"Ïîëó÷åííîå ÷èñëî: " << number << endl;
+            cout <<"Ð’Ñ‹Ð²ÐµÐ´ÐµÐ½Ð½Ð¾Ðµ Ð§Ð¸ÑÐ»Ð¾: " << number << endl;
         } while (simple(number));
         auto stop = high_resolution_clock::now();
         auto duration = duration_cast<microseconds>(stop -
                         start);
-        cout << "Çàòðà÷åíî âðåìåíè: " << duration.count() << "ìñåê" << endl;
+        cout << "Ð’Ñ€ÐµÐ¼ÐµÐ½Ñ: " << duration.count() << "Ð¼ÑÐµÐº" << endl;
     }
     return number;
 }
 int main()
 {
     int i;
-    cout <<"Ââåäèòå êîëè÷åñòâî ÷èñåë: ";
+    cout <<"Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ñ‡Ð¸ÑÐµÐ»: ";
     cin >>i;
     randomSimple(i);
     return 0;
