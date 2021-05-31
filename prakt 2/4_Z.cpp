@@ -29,18 +29,18 @@ void randomSimple(int s)
         do {
             number = mersenne();
             simples.push_back(number);
-            cout <<"Полученное число: " << number << endl;
+            cout <<"Р’С‹РІРµРґРµРЅРЅРѕРµ С‡РёСЃР»Рѕ: " << number << endl;
         } while (simple(number));
     }
     sort(simples.begin(), simples.end(),
          greater<uint32_t>());
-    cout << "\nМинимальное число: " << simples[simples.size() - 1] << endl;
-    cout << "\nМаксимальное число: " <<simples[0] << endl;
+    cout << "\nmin: " << simples[simples.size() - 1] << endl;
+    cout << "\nmax: " <<simples[0] << endl;
 }
 int main()
 {
     int i;
-    cout <<"Введите количество чисел: ";
+    cout <<"Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ С‡РёСЃРµР»: ";
     cin >>i;
     randomSimple(i);
     return 0;
