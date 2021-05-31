@@ -23,7 +23,7 @@ uint64_t randomSimple(int s)
     for(int n=0; n<s; n++) {
         do {
             number = mersenne();
-            cout <<"Ïîëó÷åííîå ÷èñëî: " << number << endl;
+            cout <<"Ð§Ð¸ÑÐ»Ð¾: " << number << endl;
         } while (simple(number));
     }
     return number;
@@ -31,7 +31,7 @@ uint64_t randomSimple(int s)
 int main()
 {
     int i;
-    cout <<"Ââåäèòå êîëè÷åñòâî ÷èñåë: ";
+    cout <<"Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ñ‡Ð¸ÑÐµÐ»: ";
     cin >>i;
     randomSimple(i);
     return 0;
