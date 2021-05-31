@@ -10,6 +10,6 @@ int main()
     tm* timeinfo = localtime(&seconds);
     char* format = "%A, %d %B %Y, %I:%M:%S";
     strftime(buffer, 80, format, timeinfo);
-    cout <<"Òåêóùåå âðåìÿ: "<<buffer<<" Èäè ïîãëàäü êîòà."<<endl;
+    cout <<"Ð’Ñ€ÐµÐ¼Ñ: "<<buffer<<" ÐŸÐ¾Ñ€Ð° Ð´ÐµÐ»Ð°Ñ‚ÑŒ Ð¿Ñ€Ð°ÐºÑ‚Ð¸ÐºÐ¸"<<endl;
     return 0;
 }
