@@ -35,7 +35,7 @@ int main()
             };
         if(prime == true) {
             if(food(a) == 2) {
-                cout <<"10ññ: "<< a << endl<< "16ññ: " << hex << a << endl;
+                cout <<"10ÑÑ: "<< a << endl<< "16ÑÑ: " << hex << a << endl;
             }
         }
     }
