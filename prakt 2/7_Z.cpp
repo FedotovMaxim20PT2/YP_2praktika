@@ -16,11 +16,11 @@ struct Card {
 };
 int main()
 {
-    string str_nom {"234567891VDKT"};//1-это 10
+    string str_nom {"234567891VDKT"};//1-СЌС‚Рѕ 10
     string str_mast {"#^-+"};
     int p,kol,n;
     do {
-        cout <<"Раздать колоду: 1- 36 карт, 2- 52 карты, 0-выход" << endl;
+        cout <<"Р Р°Р·РґР°С‚СЊ РєРѕР»РѕРґСѓ: 1- 36 РєР°СЂС‚, 2- 52 РєР°СЂС‚С‹, 0-РІС‹С…РѕРґ" << endl;
         cin >> p;
         if (!((p == 1) || (p == 2))) {}
         else if (p >0) {
@@ -31,10 +31,10 @@ int main()
                 kol=52;
                 n=0;
             }
-            cout << endl << "Собираем колоду из " << kol << " карт" << endl;
+            cout << endl << "РЎРѕР±РёСЂР°РµРј РєРѕР»РѕРґСѓ РёР· " << kol << " РєР°СЂС‚" << endl;
             if (p == 2) cout << "2,3,4,5,";
-            cout << "6,7,8,9,10,V-валет,D-дама,К-король,T-туз" << endl;
-            cout << "#-крести,^-черви,--пики,+-буби" << endl << endl;
+            cout << "6,7,8,9,10,V-РІР°Р»РµС‚,D-РґР°РјР°,Рљ-РєРѕСЂРѕР»СЊ,T-С‚СѓР·" << endl;
+            cout << "#-РєСЂРµСЃС‚Рё,^-С‡РµСЂРІРё,--РІРёРЅРё,+-Р±СѓР±Рё" << endl << endl;
             vector <Card> koloda;
             for (int j=0; j<4; j++) {
                 for (int i=n; i<13; i++) {
@@ -42,36 +42,36 @@ int main()
                 }
             }
             for (int i=0; i<kol; i++)
-                cout << i+1 << " карта:= " << str_nom[koloda[i].nominal]<<(char) str_mast[koloda[i].mast] << endl;
-            cout << endl << "Раздаем колоду карт из:"<< endl;
+                cout << i+1 << " РєР°СЂС‚Р°:= " << str_nom[koloda[i].nominal]<<(char) str_mast[koloda[i].mast] << endl;
+            cout << endl << "Р Р°Р·РґР°РµРј РєРѕР»РѕРґСѓ РєР°СЂС‚ РёР·:"<< endl;
             srand(time(NULL));
             random_shuffle(koloda.begin(),koloda.end());
             for (int i=0; i<kol; i++)
-                cout<<i+1 <<"карта:= " << str_nom[koloda[i].nominal] << str_mast[koloda[i].mast]<<endl;
+                cout<<i+1 <<"РєР°СЂС‚Р°:= " << str_nom[koloda[i].nominal] << str_mast[koloda[i].mast]<<endl;
             cout << endl;
-            cout << "Карты одного цвета,лежащие рядом:" << endl;
+            cout << "РљР°СЂС‚С‹ РѕРґРЅРѕРіРѕ С†РІРµС‚Р°,Р»РµР¶Р°С‰РёРµ СЂСЏРґРѕРј:" << endl;
             for (int i=0; i<kol-1; i++) {
                 if (str_mast[koloda[i].mast] ==
                     str_mast[koloda[i+1].mast])
-                    cout <<i+1 <<"карта:= " << str_nom[koloda[i].nominal] << str_mast[koloda[i].mast]<<" "<<i+2 <<"карта:= " << str_nom[koloda[i+1].nominal]<<str_mast[koloda[i+1].mast]<< endl;
+                    cout <<i+1 <<"РєР°СЂС‚Р°:= " << str_nom[koloda[i].nominal] << str_mast[koloda[i].mast]<<" "<<i+2 <<"РєР°СЂС‚Р°:= " << str_nom[koloda[i+1].nominal]<<str_mast[koloda[i+1].mast]<< endl;
             }
-            cout <<endl<< "Карты одного номинала,лежащие рядом: " << endl;
+            cout <<endl<< "РљР°СЂС‚С‹ РѕРґРЅРѕРіРѕ РЅРѕРјРёРЅР°Р»Р°,Р»РµР¶Р°С‰РёРµ СЂСЏРґРѕРј: " << endl;
             for (int i=0; i<kol-1; i++) {
                 if (str_nom[koloda[i].nominal] ==
                     str_nom[koloda[i+1].nominal])
-                    cout<<i+1 <<"карта:= " << str_nom[koloda[i].nominal]<< str_mast[koloda[i].mast]<<" "<<i+2 <<"карта:= " << str_nom[koloda[i+1].nominal]<<str_mast[koloda[i+1].mast]<< endl;
+                    cout<<i+1 <<"РєР°СЂС‚Р°:= " << str_nom[koloda[i].nominal]<< str_mast[koloda[i].mast]<<" "<<i+2 <<"РєР°СЂС‚Р°:= " << str_nom[koloda[i+1].nominal]<<str_mast[koloda[i+1].mast]<< endl;
             }
             int i=0;
-            cout << endl<<"Пиковая дама:= ";
+            cout << endl<<"РџРёРєРѕРІР°СЏ РґР°РјР°:= ";
             while (!((str_mast[koloda[i].mast] == str_mast[2]) &&
                      (str_nom[koloda[i].nominal] == str_nom[10]))) {
                 i=i+1;
             }
-            cout << i+1 << "-я в колоде"<< endl;
-            cout << "Тузы в колоде: "<<endl;
+            cout << i+1 << "-СЏ РІ РєРѕР»РѕРґРµ"<< endl;
+            cout << "РўСѓР·С‹ РІ РєРѕР»РѕРґРµ: "<<endl;
             for (int i=0; i<=kol; i++) {
                 if (str_nom[koloda[i].nominal] == str_nom[12])
-                    cout<<i+1 <<" карта"<< endl;
+                    cout<<i+1 <<" РєР°СЂС‚Р°"<< endl;
             }
         }
     } while (p!=0);
